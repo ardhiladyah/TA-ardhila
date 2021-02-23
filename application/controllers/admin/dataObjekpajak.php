@@ -52,7 +52,7 @@ class DataObjekpajak extends CI_Controller
 	{
 		$where = array('id_objekpajak' => $id);
 		$data['title'] = "Update Data Objek Pajak";
-		$data['objekpajak'] = $this->pajakModel->get_data_objekpajak();
+		$data['objekpajak'] = $this->pajakModel->update_data_objekpajak($id);
 		$this->load->view('templates_admin/header', $data);
 		$this->load->view('templates_admin/sidebar', $data);
 		$this->load->view('admin/updateDataObjekpajak', $data);
